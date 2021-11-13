@@ -18,7 +18,7 @@
 }
 
 header {
-	color: #fff;
+	color: #1f9e8d;
 	padding: 20px 0;
 	background: $brand-color; /* Old browsers */
 	background: linear-gradient(to bottom, $brand-color 0%, $middle-gradient-color 100%) no-repeat $brand-color;
@@ -67,6 +67,7 @@ header {
 
 section {
 	padding: 100px 0;
+	background: #121430;
 }
 
 section + section {
@@ -85,6 +86,7 @@ section + section {
 
 .page h2 {
 	text-align: center;
+	color: #1f9e8d;
 }
 
 blockquote {
@@ -107,7 +109,7 @@ blockquote {
 }
 
 blockquote:before {
-	color: #fff;
+	color: #333;
 	content: open-quote;
 	font-size: 4em;
 	line-height: 0.1em;

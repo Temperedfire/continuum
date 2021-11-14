@@ -11,10 +11,6 @@
     social_icon: Twitter
     new_window: true
   - name: Instagram
-    link: https://youtube.com/ContinuumNFT
+    link: https://instagram.com/ContinuumNFT
     social_icon: Instagram
     new_window: true
-  - name: RSS
-    link: /feed.xml
-    social_icon: RSS
-    new_window: false

@@ -9,11 +9,11 @@ google_maps_javascript_api_key:
 disqus_shortname:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
-description: Product marketing template for Jekyll.
+logo: /ContinuumLogo.png
+description: A curated pocket of sci-fi NFTs stationed on a space habitat.
 author: 
-  name:
-  email:
+  name: Continuum
+  email: info@cntnuum.space
   twitter: ContinuumNFT
 social:
   name: Continuum

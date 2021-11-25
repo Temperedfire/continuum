@@ -71,6 +71,14 @@ section {
 	color: rgb(209, 209, 209);
 }
 
+
+.am-border {
+	border-style: solid;
+   	border-width: 0px 0px 1px 0px;
+	border-color: #383B4D94;
+}
+    
+
 section + section {
 	padding-top: 0;
 }

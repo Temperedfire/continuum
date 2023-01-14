@@ -3,15 +3,14 @@
 	margin: 0 auto;
 }
 
-@media screen and (min-width: 80rem) {
 .landingtext-container {
 	max-width: 750px;
 	vertical-align: middle;
-	line-height: 80px;
+	line-height: 90px;
 	margin: 15 auto;
-	padding: 90px 75px;
+	padding: 105px 75px;
+	text-align: left;
 	}
-}
 
 .border-text {
 	border: .5px solid #403e41;
@@ -43,7 +42,7 @@
 	border: .5px solid #403e41;
 }
 
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 60rem) {
 .grid-flex {
 		max-width: 1600px;
 		display: grid;
@@ -51,7 +50,6 @@
 		grid-template-rows: 1fr;
 		gap: 35px;
 		margin: 15 auto;
-		padding: 20px;
 		position: relative;
 	}
 
@@ -60,22 +58,24 @@
 	}
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 540px) {
+/* Extra small devices (phones, 640px and down) */
+@media only screen and (max-width: 640px) {
 	.landingtext-container {
-		min-width: 15rem;
-		max-height: 30rem;
+		min-width: 15px;
+		max-height: 5%;
 		font-size: 12px;
-		padding: 40px 35px;
+		padding: 35px;
 		margin: auto;
+	}
+	.grid-flex {
+		grid-template-rows: 10%;
+		grid-template-columns: 50% 50%;
 	}
 }
 
-/* Medium devices (phones, 640px and down) */
-@media only screen and (min-width: 560px) {
+/* Medium devices (phones, 600px and up) */
+@media only screen and (min-width: 600px) {
 	.grid-flex {
-		grid-template-columns: 45% 45%;
-		gap: 25px;
 		row-gap: 2%;
 		min-width: 50%;
 		align-items: center;
@@ -117,7 +117,7 @@ header {
 
 .content {
 	background: #0D0F0F;
-	padding: 1px 50px 175px 50px;
+	padding: 1px 38px 175px 38px;
 	position: relative;
 }
 

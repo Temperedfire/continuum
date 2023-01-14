@@ -43,6 +43,11 @@
 
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.header-wip	{font-size: 7em}
+}
+
 .header-img {
 	margin: -15px 10px;
 	padding: 0;

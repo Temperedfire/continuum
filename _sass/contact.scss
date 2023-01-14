@@ -1,21 +1,15 @@
-.map {
-	width: 100%;
-	margin: 100px 0;
-	height: 400px;
-}
-
 .contact-box {
-	@extend %flexbox;
-	@include flex-flow(wrap);
 	max-width: 750px;
 	margin: 0 auto;
 
 	form {
-		width: 100%
+		width: 100%;
 	}
 
 	p {
 		margin: 0;
+		color: rgb(209, 209, 209);
+		
 	}
 
 	.contact-form, .contact-details  {
@@ -23,7 +17,7 @@
 			-webkit-flex: 1;
 			flex: 1;
 		}
-		margin: 0 30px;
+		margin: 0;
 	}
 
 	.contact-details {

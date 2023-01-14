@@ -1,24 +1,25 @@
 # ----
 # Site
 
-title: Hydra Template
-url: "https://proud-alligator.cloudvent.net"
+title: Continuum
+url: "https://www.continuumspc.xyz/"
 baseurl:
 google_analytics_key:
 google_maps_javascript_api_key:
 disqus_shortname:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
-description: Product marketing template for Jekyll.
-author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
+logo: /ContinuumLogo.png
+logo: /images/ContinuumFullLogo.png
+description: Home
+author: 
+  name: Continuum
+  email: continuumnft@gmail.com
+  twitter: CONTINUUMspc
 social:
-  name: Hydra Template
+  name: Continuum
   links:
-    - https://github.com/CloudCannon/hydra-jekyll-template
+    - https://www.continuumspc.xyz/
 
 # -----
 # Build
@@ -30,7 +31,7 @@ collections:
     _hide_content: true
 
 paginate: 10
-paginate_path: "/blog/:num/"
+paginate_path: "/codex/:num/"
 permalink: pretty
 
 defaults:
@@ -94,13 +95,3 @@ _select_data:
     - Twitter
     - YouTube
     - RSS
-
-_comments:
-  map: Update the map location and display settings.
-  latitude: Coordinates for the center marker on the map.
-  longitude: Coordinates for the center marker on the map.
-  zoom: The zoom level for the map.
-  pricing_table: Update the information in the pricing tables.
-  highlight: Emphasis the text
-  color: The background colour used in the plan name and call to action.
-  new_window: Open link in new window

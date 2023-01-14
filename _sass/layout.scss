@@ -1,15 +1,35 @@
-.container, .text-container {
-	margin: 0 auto;
-	position: relative;
-	padding: 0 20px;
-}
-
 .text-container {
 	max-width: 750px;
+	margin: 0 auto;
+}
+
+.landingtext-container {
+	max-width: 750px;
+	vertical-align: middle;
+	line-height: 110px;
+	margin: 15 auto;
+	padding: 85px 75px 75px 75px;
+	}
+
+.border-text {
+	border: .5px solid #403e41;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.landingtext-container {
+		min-width: 15rem;
+		max-height: 30rem;
+		font-size: 14px;
+		padding: 30px 55px;
+	}
 }
 
 .container {
-	max-width: 1140px;
+	max-width: 1600px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 20px;
 
 	&.max-container {
 		max-width: 100%;
@@ -17,8 +37,39 @@
 	}
 }
 
+.hover-section {
+	max-width: 1000px;
+	grid-column: 1;
+	grid-row: 1;
+	margin: 0 auto;
+	padding: 20px 50px;
+}
+
+.border-img {
+	border: .5px solid #403e41;
+}
+
+
+@media screen and (min-width: 80rem) {
+.grid-flex {
+		max-width: 1600px;
+		display: grid;
+		grid-template-columns: 7fr 7fr;
+		grid-template-rows: 1fr;
+		gap: 35px;
+		margin: auto;
+		padding: 20px;
+		position: relative;
+	}
+
+	p {
+		font-size: 1.15em;
+	}
+}
+
+
 header {
-	color: #fff;
+	color: #f5f5f5;
 	padding: 20px 0;
 	background: $brand-color; /* Old browsers */
 	background: linear-gradient(to bottom, $brand-color 0%, $middle-gradient-color 100%) no-repeat $brand-color;
@@ -50,27 +101,28 @@ header {
 }
 
 .content {
-	background: #fff;
-	padding: 1px 0 0 0;
+	background: #0D0F0F;
+	padding: 1px 50px 175px 50px;
 	position: relative;
 }
 
 .screenshot{
 	max-width: 100%;
 	height: auto;
-	display: block;
-	box-shadow: 0 1px 0 #ccc, 0 1px 0 1px #eee;
-	border-radius: 2px;
-	margin-left: auto;
-	margin-right: auto;
-	background: #DDD url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2244%22%20height%3D%2212%22%20viewBox%3D%220%200%2044%2012%22%3E%3Ccircle%20cx%3D%226%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3C%2Fsvg%3E') 4px 4px no-repeat;
-	padding: 20px 0 0 0;
+	padding: 20px 0 20px 0;
 	position: relative;
 }
 
 section {
 	padding: 100px 0;
+	background: #0D0F0F;
+	color: rgb(209, 209, 209);
 }
+
+.dramatic-spacing {
+	padding: 200px 0;
+}
+    
 
 section + section {
 	padding-top: 0;
@@ -88,6 +140,7 @@ section + section {
 
 .page h2 {
 	text-align: center;
+	color: hsl(254,70%,70%);
 }
 
 blockquote {
@@ -110,7 +163,7 @@ blockquote {
 }
 
 blockquote:before {
-	color: #ccc;
+	color: #333;
 	content: open-quote;
 	font-size: 4em;
 	line-height: 0.1em;

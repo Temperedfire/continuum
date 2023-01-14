@@ -38,7 +38,11 @@
 			&.twitter-icon:hover svg {
 				fill: #55acee;
 			}
-
+			
+			&.discord-icon:hover svg {
+				fill: #8C9EFF;
+			}
+			
 			&.google-plus-icon:hover svg {
 				fill: #db4437;
 			}
@@ -70,7 +74,7 @@ footer {
 	padding: 50px 0 50px 0;
 	font-size: 1.1em;
 	position: relative;
-	background: #2b2b40;
+	background: rgb(22, 22, 22);
 	color: #fff;
 
 	.copyright {

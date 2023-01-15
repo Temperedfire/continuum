@@ -38,9 +38,12 @@
 
 
 .header-wip	{
-	color: hsl(254,70%,70%);
+	color: #6949D1;
 	font-size: 9em;
 
+	&:hover {
+		color: #45308d;
+	}
 }
 
 /* Extra small devices (phones, 600px and down) */

@@ -6,9 +6,9 @@
 .landingtext-container {
 	max-width: 750px;
 	vertical-align: middle;
-	line-height: 90px;
+	line-height: 75px;
 	margin: 15 auto;
-	padding: 105px 75px;
+	padding: 85px 75px;
 	text-align: left;
 	}
 
@@ -67,10 +67,12 @@
 		padding: 35px;
 		margin: auto;
 	}
+
 	.grid-flex {
 		grid-template-rows: 10%;
 		grid-template-columns: 50% 50%;
 	}
+
 }
 
 /* Medium devices (tablets, 600px and up) */
@@ -117,7 +119,7 @@ header {
 
 .content {
 	background: #0D0F0F;
-	padding: 1px 38px 175px 38px;
+	padding: 1px 28px 175px 28px;
 	position: relative;
 }
 

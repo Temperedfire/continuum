@@ -1,4 +1,10 @@
 
+- name: Projects
+  link: /projects/
+  new_window: false
+  highlight: false
+  new_window: false
+  highlight: false
 - name: Codex
   link: /codex/
   new_window: false

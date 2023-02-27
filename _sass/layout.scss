@@ -17,7 +17,7 @@
 }
 
 .container {
-	max-width: 1600px;
+	max-width: 1400px;
 	margin: 0 auto;
 	position: relative;
 	padding: 0 20px;
@@ -44,7 +44,7 @@
 
 @media screen and (min-width: 60rem) {
 .grid-flex {
-		max-width: 1600px;
+		max-width: 1400px;
 		display: grid;
 		grid-template-columns: 7fr 7fr;
 		grid-template-rows: 1fr;
@@ -155,7 +155,7 @@ section + section {
 }
 
 .project-img {
-	max-width: 35%;
+	max-width: 48%;
 	height: auto;
 	margin: 0 auto;
 	align-items: center;

@@ -1,7 +1,7 @@
 ---
 name: RAE 
 position: Founder/Artist
-image_path: https://i.imgur.com/DmoChgV.jpg
-twitter: gammaRAEDEN
+image_path: 
+twitter: arraeofthings
 blurb: Motherboard of Continuum SPC.
 ---

@@ -1,7 +1,7 @@
 ---
-name: RAE 
-position: Founder/Artist
-image_path: 
+name: arraeofthings 
+position: Founder, Artist
+image_path: /images/Team/Ar-GRAPHIC.png
 twitter: arraeofthings
-blurb: Motherboard of Continuum SPC.
+blurb: Explorer of possibilities
 ---

@@ -52,4 +52,4 @@ Union is everywhere, even in spaces where anonymous identities are the norm. Tri
 <center><a href="https://objkt.com/explore/tokens/1?faContracts=KT1BQrggAtwTNNgC6wGZEsa7Ky5rgmp2pCJW">ɯⅎɥ ʌsƃ nʅ ɥƃɥʅsʇ ɯʌʍoʅꓕ Series - ƃsʇɹO</a></center>
 
 <br>![Chart Watching]({{ site.baseurl }}/images/ACQ/SPC_ACQ-A13.png)
-<center><a href="https://objkt.com/asset/KT1GZ5XjfktkHTGSXoaMp9LZP81ZiK9g1dbw/3">"Chart Watching," Juuc: Genesis Series - Juuc</a></center>
+<center><a href="https://objkt.com/asset/KT1GZ5XjfktkHTGSXoaMp9LZP81ZiK9g1dbw/3">"Chart Watching" - Juuc</a></center>

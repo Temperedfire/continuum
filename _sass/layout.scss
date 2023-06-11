@@ -28,6 +28,25 @@
 	}
 }
 
+.works-container {
+	position: relative;
+	color: white;
+}
+
+/* Top left text */
+.top-left {
+	position: absolute;
+	top: 40px;
+	left: 100px;
+  }
+
+  /* Top right text */
+.top-right {
+	position: absolute;
+	top: 40px;
+	right: 100px;
+  }
+
 @media screen and (min-width: 80rem) {
 .hover-section {
 	max-width: 60rem;

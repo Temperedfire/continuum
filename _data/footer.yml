@@ -7,6 +7,7 @@
     link: /contact/
   - name: Expansion
     link: https://airtable.com/shrAcFH8E42Z7D83P
+    new_window: true
 
 - links:
   - name: Twitter

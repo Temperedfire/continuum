@@ -1,8 +1,12 @@
 - links:
   - name: Works
     link: /works/
+  - name: Manifesto
+    link: /manifesto/
   - name: Codex
     link: /codex/
+
+- links:
   - name: Contact
     link: /contact/
   - name: Expansion
@@ -15,7 +19,7 @@
     social_icon: Twitter
     new_window: true
   - name: Instagram
-    link: https://instagram.com/continuum.spc?igshid=YmMyMTA2M2Y=
+    link: https://instagram.com/continuum.spc
     social_icon: Instagram
     new_window: true
     

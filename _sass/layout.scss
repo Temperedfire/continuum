@@ -49,12 +49,16 @@
 
 @media screen and (min-width: 80rem) {
 .hover-section {
-	max-width: 60rem;
-	grid-column: 1;
-	grid-row: 1;
+	max-width: 65rem;
 	margin: 0 auto;
-	padding: 20px 50px;
 	}
+}
+
+@media screen and (min-width: 80rem) {
+.hover-works {
+		max-width: 75rem;
+		margin: 0 auto;
+		}
 }
 
 .border-img {

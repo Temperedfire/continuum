@@ -34,17 +34,28 @@
 .hero {
 	color: #ffffff;
 	text-align: center;
-	margin: 85px auto 35px auto;
+	margin: 35px auto;
 
+.hero-hover {
+		max-width: 85rem;
+		margin: 25px auto 0 auto;
+		padding: auto 125px;
+		}
 
 .header-wip	{
-	color: #6949D1;
-	font-size: 9em;
+	color: #fff;
+	font-size: 4.1em;
+	font-weight: 125;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-	.header-wip	{font-size: 7em}
+	.header-wip	{font-size: 2.1em}
+
+	.hero-hover {
+		padding: auto 150px;
+		margin: auto 35px;
+	}
 }
 
 .header-img {

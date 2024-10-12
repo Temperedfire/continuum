@@ -5,14 +5,14 @@
   highlight: false
   new_window: false
   highlight: false
+- name: Archive
+  link: https://archive.continuumspc.xyz
+  new_window: false
+  highlight: false
+  new_window: false
+  highlight: false
 - name: Manifesto
   link: /manifesto/
-  new_window: false
-  highlight: false
-  new_window: false
-  highlight: false
-- name: Codex
-  link: /codex/
   new_window: false
   highlight: false
   new_window: false

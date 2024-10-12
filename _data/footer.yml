@@ -1,10 +1,10 @@
 - links:
   - name: Works
     link: /works/
+  - name: Archive
+    link: https://archive.continuumspc.xyz
   - name: Manifesto
     link: /manifesto/
-  - name: Codex
-    link: /codex/
 
 - links:
   - name: Contact

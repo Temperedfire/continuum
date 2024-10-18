@@ -14,37 +14,168 @@ description: Creative space motivated by exploration.
 	
 	  gtag('config', 'G-4GJ3V3CCT5');
 </script>
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	
 </head>
 
 
-
 <section class="hero">
-	<section>
-		<div class="hero-hover">
-			<div class="header-wip">A creative space motivated by exploration</div>
-		<p>
-			<h2>✱</h2>
-		</p> 
-	</div>
-</section> 
+	<section class="scrolling-gallery">
+		<h1 class="gallery-header">A creative space ——— <br>motivated by exploration*</h1>
+		<div class="gallery-content">
+			<!-- Scrollable Image Gallery on the Left --><div class="gallery-container">
+				<div class="gallery-nav-dots" id="navDotsContainer"></div>
+				<button class="gallery-nav gallery-nav-left" id="prevImage" disabled>‹</button> <!-- Initially disabled -->
+			
+				<div class="gallery-set-wrapper" id="galleryWrapper">
+					<div class="gallery-set">
+						<img src="{{ site.baseurl }}/images/ARCHIVE/SPC_SCRN.png" alt="SPC Archive Home"
+							class="gallery-image zoomable-image">
+						<br>
+						<div class="text-link"><a href="https://archive.continuumspc.xyz/">Archive Site</a></div>
+					</div>
+					<div class="gallery-set">
+						<img src="{{ site.baseurl }}/images/ARCHIVE/SPC_SCRN2.png" alt="SPC Archive Index"
+							class="gallery-image zoomable-image">
+						<br>
+						<div class="text-link"><a href="https://archive.continuumspc.xyz/">Archive Site</a></div>
+					</div>
+					<div class="gallery-set">
+						<img src="{{ site.baseurl }}/images/HEAP/HEAP_WORKSB.png" alt="HEAP" class="gallery-image zoomable-image">
+						<br>
+						<div class="text-link"><a href="https://heap.continuumspc.xyz/">HEAP Site</a></div>
+					</div>
+				</div>
+			
+				<button class="gallery-nav gallery-nav-right" id="nextImage">›</button>
+			</div>
+	
+			<!-- Description Text on the Right -->
+			<div class="gallery-description">
+				<h2 id="description-title"></h2>
+				<p id="description-text"></p>
+			</div>
+		</div>
+	</section>
 
-	<div>
-		<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-			viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-			<defs>
-				<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-			</defs>
-			<g class="parallax">
-				<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(35,35,35,0.7" />
-				<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(35,35,35,0.5)" />
-				<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-				<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(255,255,255,0.7)" />
-			</g>
-		</svg>
+	
+	<!-- Modal for zooming images -->
+	<div id="imageModal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="zoomedImage">
+		<div id="caption"></div>
 	</div>
-
 </section>
 
+
+
+<script>// Modal zoom functionality (unchanged)
+	var modal = document.getElementById("imageModal");
+	var modalImg = document.getElementById("zoomedImage");
+	var captionText = document.getElementById("caption");
+	
+	var zoomableImages = document.querySelectorAll(".zoomable-image");
+	zoomableImages.forEach(function(image) {
+		image.onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		};
+	});
+	
+	var span = document.getElementsByClassName("close")[0];
+	span.onclick = function() {
+		modal.style.display = "none";
+	};
+	
+	// Descriptions for each gallery set
+	const descriptions = [
+		{
+			title: "✱SPC Archive, 2023 - Present",
+			text: "The ✱SPC Archive is a program of documentation and showcase for creative contemporaries. An extensive index of visual arts, visual communication, writes, objects, and various spaces."
+		},
+		{
+			title: "✱SPC Archive, 2023 - Present",
+			text: "The ✱SPC Archive is a program of documentation and showcase for creative contemporaries. An extensive index of visual arts, visual communication, writes, objects, and various spaces."
+		},
+		{
+			title: "HEAP, 2025",
+			text: "Biannual publication. Thematic compilation of visual and written work within art, assemblage, and concurrent culture."
+		}
+	];
+	
+	// Carousel functionality
+	const galleryWrapper = document.getElementById('galleryWrapper');
+	const gallerySets = document.querySelectorAll('.gallery-set');
+	const prevImageButton = document.getElementById('prevImage');
+	const nextImageButton = document.getElementById('nextImage');
+	const navDotsContainer = document.getElementById('navDotsContainer'); // Container for navigation dots
+	
+	let currentIndex = 0; // Track the current image index
+	const totalImages = gallerySets.length;
+	
+	// Create navigation dots dynamically
+	function createNavDots() {
+		navDotsContainer.innerHTML = ''; // Clear any existing dots
+		for (let i = 0; i < totalImages; i++) {
+			const dot = document.createElement('span');
+			dot.classList.add('nav-dot');
+			if (i === currentIndex) {
+				dot.classList.add('active'); // Highlight the active dot
+			}
+			// Add click functionality to navigate to the respective image
+			dot.addEventListener('click', () => {
+				currentIndex = i;
+				updateGallery();
+			});
+			navDotsContainer.appendChild(dot);
+		}
+	}
+	
+	// Update the displayed image, description, and navigation dots
+	function updateGallery() {
+		// Calculate the offset to center the current image
+		const offset = -currentIndex * galleryWrapper.clientWidth;
+		galleryWrapper.style.transform = `translateX(${offset}px)`;
+	
+		// Update description
+		document.getElementById('description-title').textContent = descriptions[currentIndex].title;
+		document.getElementById('description-text').textContent = descriptions[currentIndex].text;
+	
+		// Enable/Disable buttons based on the current index
+		prevImageButton.disabled = currentIndex === 0;
+		nextImageButton.disabled = currentIndex === totalImages - 1;
+	
+		// Update the active navigation dot
+		const dots = document.querySelectorAll('.nav-dot');
+		dots.forEach((dot, index) => {
+			if (index === currentIndex) {
+				dot.classList.add('active');
+			} else {
+				dot.classList.remove('active');
+			}
+		});
+	}
+	
+	// Event listener for "next" button
+	nextImageButton.addEventListener('click', () => {
+		if (currentIndex < totalImages - 1) {
+			currentIndex++;
+			updateGallery();
+		}
+	});
+	
+	// Event listener for "prev" button
+	prevImageButton.addEventListener('click', () => {
+		if (currentIndex > 0) {
+			currentIndex--;
+			updateGallery();
+		}
+	});
+	
+	// Initial call to create navigation dots and update the gallery (since the first image is shown initially)
+	createNavDots();
+	updateGallery();
+	
+</script>
 
 

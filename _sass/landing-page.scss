@@ -33,84 +33,226 @@
 
 .hero {
 	color: #ffffff;
-	text-align: center;
-	margin: 25px auto;
-
-.hero-hover {
-		max-width: 85rem;
-		margin: 65px 10px 0 10px;
-		padding: auto 125px;
-		}
-
-.header-wip	{
-	color: #fff;
-	font-size: 4.1em;
+	margin: 15px auto;
 }
 
-/* Medium devices (tablets, 600px and up) */
+
+/* Gallery Container Styling */
+.scrolling-gallery {
+	max-width: 1300px;
+	margin: 20px auto;
+	padding: 0 20px;
+}
+
+/* Gallery Header */
+.gallery-header {
+	font-size: 6.1em;
+	color: #fff;
+	text-align: left;
+	margin-bottom: 40px;
+	padding: 20px 25px;
+	display: inline-block;
+	border-left: 5px solid #967DE8;
+}
+
+/* Gallery Image and Description Container */
+.gallery-content {
+	display: grid;
+	grid-template-columns: 2fr 1.5fr; /* 2 parts for gallery, 1 part for description */
+	gap: 40px;
+}
+
+.gallery-container {
+	display: flex;
+	position: relative;
+	overflow: hidden; /* Ensure images don't overflow */
+}
+
+.gallery-set-wrapper {
+	display: flex;
+	transition: transform 0.5s ease; /* Smooth transition between images */
+}
+
+/* Single gallery set */
+.gallery-set {
+	min-width: 100%; /* Make each set take up the full container width */
+	padding: auto 25px;
+	position: relative;
+}
+
+/* Images Styling */
+.gallery-image {
+	display: block;
+	width: 90%;
+	height: auto;
+	border: .5px solid #403e41;
+	cursor: pointer;
+	transition: transform 0.3s ease-in-out;
+}
+
+/* Description Text */
+.gallery-description {
+	margin: auto;
+	padding: auto;
+	color: #fff;
+	font-size: 1.1em;
+	position: relative;
+}
+
+.gallery-description h2 {
+	font-size: 2.1em;
+	margin-bottom: 10px;
+	color: #967DE8;
+}
+
+.text-link {
+	color: #999;
+	padding-bottom: 7px;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.3s ease-in-out;
+  }
+  
+  .text-link:hover {
+	border-bottom: 2px solid #967DE8;
+  }
+
+/* Navigation Arrows */
+.gallery-nav {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 2.5em;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	z-index: 10;
+	padding: 10px;
+	background-color: transparent;
+}
+
+.gallery-nav-left {
+	left: -30px;
+}
+
+.gallery-nav-right {
+	right: -30px;
+}
+
+.gallery-nav:disabled {
+	opacity: 0.3;
+	cursor: not-allowed;
+}
+
+/* Navigation Dots */
+.gallery-nav-dots {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #aaa;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-dot.active {
+	background-color: #967DE8;
+}
+
+ /* Modal for Zoom */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	padding-top: 60px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.9);
+  }
+  
+  .modal-content {
+	margin: auto;
+	margin-top: 60px;
+	display: block;
+	width: 80%;
+	max-width: 1080px;
+  }
+  
+  .close {
+	position: absolute;
+	top: 20px;
+	right: 35px;
+	color: #fff;
+	font-size: 40px;
+	font-weight: bold;
+	cursor: pointer;
+  }
+  
+  #caption {
+	color: #ccc;
+	font-size: 16px;
+	text-align: center;
+	margin-top: 10px;
+  }
+  
+
+ /* Scaling to smaller screen sizes */
+
+  @media screen and (max-width: 700px){
+	.modal-content {
+	  width: 100%;
+	}
+  }
+
+  
+  /* Medium devices (tablets, 600px and up) */
 @media only screen and (min-width: 600px) {
-	.hero-hover {
+
+	.hero {
 		padding: auto;
-		margin: auto;
+		margin: auto 10px;
+	}
+	.gallery-description {
+		padding: auto 15px;
 	}
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-	.header-wip	{font-size: 2.1em}
 
-	.hero-hover {
+	.hero {
 		padding: auto;
 		margin: auto 15px;
 	}
-}
-
-.header-img {
-	margin: -15px 10px;
-	padding: 0;
-
-}
-
-	p {
-		color: #fff;
+	.scrolling-gallery {
+		margin: -35px auto;
+	}
+	.gallery-header {
+		font-size: 2.5rem;
+	}
+	.gallery-content {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.gallery-description {
+		font-size: .8em;
+		padding: 5px;
+		margin-bottom: 18px;
+	}
+	.gallery-description h2 {
+		font-size: 1.9em;
 	}
 }
-
-.waves {
-	position:relative;
-	width: 100%;
-	height:15vmin;
-	margin-bottom:-7px; /*Fix for safari gap*/
-	min-height:100px;
-	max-height:200px;
-  }
-
-  /* Animation */
-
-.parallax > use {
-	animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-  }
-  .parallax > use:nth-child(1) {
-	animation-delay: -3s;
-	animation-duration: 7s;
-  }
-  .parallax > use:nth-child(2) {
-	animation-delay: -3s;
-	animation-duration: 10s;
-  }
-  .parallax > use:nth-child(3) {
-	animation-delay: -4s;
-	animation-duration: 13s;
-  }
-  .parallax > use:nth-child(4) {
-	animation-delay: -5s;
-	animation-duration: 20s;
-  }
-  @keyframes move-forever {
-	0% {
-	 transform: translate3d(-90px,0,0);
-	}
-	100% { 
-	  transform: translate3d(85px,0,0);
-	}
-  }

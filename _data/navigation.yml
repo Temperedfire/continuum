@@ -1,10 +1,4 @@
 
-- name: Works
-  link: /works/
-  new_window: false
-  highlight: false
-  new_window: false
-  highlight: false
 - name: Archive
   link: https://archive.continuumspc.xyz
   new_window: false

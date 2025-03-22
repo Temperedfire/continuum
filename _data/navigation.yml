@@ -1,6 +1,6 @@
 
 - name: Archive
-  link: https://archive.continuumspc.xyz
+  link: https://www.spcarchive.com
   new_window: false
   highlight: false
   new_window: false
@@ -14,8 +14,4 @@
 - name: Contact
   link: /contact/
   new_window: false
-  highlight: false
-- name: Expansion
-  link: https://airtable.com/appaiY4XemcT2LwzT/pag3mYRoadnMLN8qr/form
-  new_window: true
   highlight: false

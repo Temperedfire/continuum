@@ -1,15 +1,8 @@
 - links:
   - name: Archive
-    link: https://archive.continuumspc.xyz
-  - name: Manifesto
-    link: /manifesto/
-
-- links:
+    link: https://www.spcarchive.com
   - name: Contact
     link: /contact/
-  - name: Expansion
-    link: https://airtable.com/shrAcFH8E42Z7D83P
-    new_window: true
 
 - links:
   - name: Twitter
